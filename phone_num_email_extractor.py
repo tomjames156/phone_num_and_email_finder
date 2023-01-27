@@ -1,4 +1,7 @@
 # import pyperclip module
+import pyperclip
+
+print(pyperclip.paste())
 # store the text from the clipboard in a variable 
 # create a variable for the results
 # create a phone number regex with groups
