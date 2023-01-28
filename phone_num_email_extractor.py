@@ -21,18 +21,18 @@ phone_regex = re.compile(r'''
 
 # create an email regex with groups
 email_regex = re.compile(r'''
-([a-z]+\w+)    # email name
+([a-zA-Z0-9]+[_\.-]*[a-zA-Z0-9]+)    # email name
 (@)    # at symbol
-([a-z]+)    # email provider
-(\.com|\.me)    # domain extension
+([\w\-]+)    # email provider
+(\.)    # dot separator
+([\w\-\.]+)    # domain extension
 ''', re.VERBOSE)
 
-# join each group together before adding it to the results variable
 # copy the text back to the clipboard
-print(phone_regex.findall("+2437166293027 08155807084 08038672593"))
-emails = email_regex.findall('gbae67@gmail.comtomi134@protonmail.com rosettadiamond@yahoo.com+2437068293037')
-# print(emails)
+phone_numbers = phone_regex.findall("+2437166293027 08155807084 08038672593"))
+emails = email_regex.findall('gbae67@gmail.com tomi134@protonmail.com rosettadiamond@yahoo.com +2437068293037 xerox@filly.co.uk noahmonk@gmail.com')
 
+# join each group together before adding it to the results variable
 def join_group(list_container):
     """This function joins the parts of a group tuple together"""
 
