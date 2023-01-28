@@ -32,3 +32,18 @@ email_regex = re.compile(r'''
 print(phone_regex.findall("+2437166293027 08155807084 08038672593"))
 emails = email_regex.findall('gbae67@gmail.comtomi134@protonmail.com rosettadiamond@yahoo.com+2437068293037')
 # print(emails)
+
+def join_group(list_container):
+    """This function joins the parts of a group tuple together"""
+
+    output = "" # output string
+    
+    for group_tuple in list_container:
+        current_string = ""
+        for element in group_tuple:
+            current_string += element
+        output += f"{current_string} "
+    
+    return output.strip()
+
+print(join_group(emails))
