@@ -7,8 +7,8 @@ clipboard_text = pyperclip.paste()
 
 # create a variable for the results
 results_str = ""
-# create a phone number regex with groups
 
+# create a phone number regex with groups
 phone_regex = re.compile(r'''
 (\+234|0)?    # country code or starting zero
 (\s)?    # separator
@@ -22,4 +22,4 @@ phone_regex = re.compile(r'''
 # create an email regex with groups
 # join each group together before adding it to the results variable
 # copy the text back to the clipboard
-print(phone_regex.search("0706 829 3037").group())
+print(phone_regex.search("07068293037").group())
