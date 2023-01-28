@@ -44,4 +44,4 @@ for text in clipboard_text:
         results_str += f"{text}\n"
 
 results_str = results_str.strip()
-print(results_str)
+pyperclip.copy(results_str)
