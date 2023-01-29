@@ -39,5 +39,9 @@ for match_tuple in all_matches:
         current_match += match_group
     results_str += f"{current_match}\n"
 
-# copy the text back to the clipboard
-pyperclip.copy(results_str)
+if(len(results_str) > 0):
+    # copy the text back to the clipboard
+    pyperclip.copy(results_str)
+    print("Copied to Clipboard!")
+else:
+    print("No phone numbers or email addresses found😢")
