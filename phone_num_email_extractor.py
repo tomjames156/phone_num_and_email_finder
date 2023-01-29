@@ -42,7 +42,11 @@ for text in clipboard_text:
     if(is_match(text)):
         results_str += f"{text}\n"
 
-results_str = results_str.strip()
+if(len(results_str) > 0):
+    results_str = results_str.strip()
 
-# copy the text back to the clipboard
-pyperclip.copy(results_str)
+    # copy the text back to the clipboard
+    pyperclip.copy(results_str)
+    print("Copied to Clipboard!")
+else:
+    print("No phone numbers or emails were found😢")
